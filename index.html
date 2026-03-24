@@ -49,6 +49,18 @@
                     <span id="currentDateDisplay" class="font-bold text-sm opacity-60"></span>
                 </div>
             </header>
+            <!-- Dashboard Grid -->
+            <div class="p-4 sm:p-6 lg:p-10 max-w-5xl w-full mx-auto space-y-8">
+
+                <!-- Add Task Input (Task 2 & 4) -->
+                <section class="flex flex-col sm:flex-row gap-4">
+                    <input type="text" id="taskInput" placeholder="WHAT NEEDS TO BE DONE?"
+                        class="flex-1 bg-white border-4 border-[#1a1c1c] p-3 text-xl font-bold uppercase focus:outline-none focus:border-primary neo-shadow-sm transition-colors placeholder:opacity-40" />
+                    <button id="addTaskBtn"
+                        class="bg-[#1a1c1c] text-white px-8 py-3 font-black uppercase text-xl border-4 border-[#1a1c1c] hover:bg-primary hover:border-primary transition-colors neo-shadow-sm flex items-center gap-2">
+                        <span class="material-symbols-outlined">add</span> ADD
+                    </button>
+                </section>
 </body>
 
 </html>
