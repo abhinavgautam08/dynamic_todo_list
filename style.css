@@ -42,3 +42,15 @@ body {
     border-width: 0 4px 4px 0;
     transform: rotate(45deg);
 }
+/* Edit mode input transitions */
+.edit-input {
+    background-color: white !important;
+    border-bottom: 4px solid #1a1c1c !important;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    opacity: 1 !important;
+}
+.edit-input:focus {
+    outline: none;
+    border-color: #b70100 !important;
+}
