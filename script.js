@@ -156,3 +156,26 @@ function deleteTask(id) {
     saveTasks();
     renderTasks();
 }
+function toggleTask(id) {
+    // Basic loop instead of array find
+    for (var i = 0; i < tasks.length; i++) {
+        if (tasks[i].id === id) {
+            if (tasks[i].completed === true) {
+                tasks[i].completed = false;
+            } else {
+                tasks[i].completed = true;
+            }
+            break; // Stop loop once we find it
+        }
+    }
+    
+    saveTasks();
+    renderTasks();
+}
+
+function setFilter(filterType) {
+    currentFilter = filterType;
+    renderTasks();
+}
+
+function editTask(id) 
