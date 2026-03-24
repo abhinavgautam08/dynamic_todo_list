@@ -122,3 +122,13 @@ function addTask() {
     
     if (text === "") {
         alert("Task cannot be empty!");
+        // return stops the function from running further - abhinavgautam08
+        return;
+    }
+    
+    var newTask = {
+        id: generateId(),
+        text: text,
+        completed: false
+    };
+    
