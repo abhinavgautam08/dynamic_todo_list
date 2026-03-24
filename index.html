@@ -61,6 +61,34 @@
                         <span class="material-symbols-outlined">add</span> ADD
                     </button>
                 </section>
+                <!-- Stats Section (Task 6) -->
+                <section class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div
+                        class="md:col-span-2 bg-primary border-4 border-on-background p-4 lg:p-5 flex flex-col justify-between min-h-[80px] neo-shadow relative overflow-hidden">
+                        <div class="relative z-10">
+                            <h2
+                                class="text-2xl lg:text-3xl font-black text-white tracking-tighter leading-none mb-1 uppercase">
+                                FOCUS_MODE: ON</h2>
+                            <p id="statsCounter"
+                                class="text-white font-bold uppercase tracking-widest opacity-80 text-xs">0 Remaining /
+                                0 Completed / 0 Total</p>
+                        </div>
+                        <div class="absolute -right-4 -bottom-8 opacity-10">
+                            <span class="material-symbols-outlined text-[100px]"
+                                data-icon="my_location">my_location</span>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-surface-container border-4 border-on-background p-4 lg:p-5 neo-shadow flex flex-col justify-center items-center text-center">
+                        <span class="text-label text-on-background opacity-60 font-black text-xs uppercase mb-1">Completion Rate</span>
+                        <span id="productivityPercentage" class="text-4xl font-black text-on-background leading-none">0%</span>
+                        <div class="w-full bg-white mt-3 h-3 border-2 border-on-background">
+                            <div id="productivityBar"
+                                class="bg-primary h-full w-[0%] border-r-2 border-on-background transition-all duration-500">
+                            </div>
+                        </div>
+                    </div>
+                </section>
 </body>
 
 </html>
