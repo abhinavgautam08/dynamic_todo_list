@@ -18,3 +18,7 @@ tailwind.config = {
     },
   },
 }
+
+// Initialize State - abhinavgautam08
+var tasks = [];
+var currentFilter = 'all';
