@@ -70,7 +70,7 @@ function renderTasks() {
         } else {
             checkboxHtml = '<input type="checkbox" class="brutalist-checkbox shrink-0" onchange="toggleTask(' + task.id + ')"/>';
         }
-        
+
         var textClass = "task-title text-lg lg:text-xl font-black uppercase text-on-background w-full block ";
         if (task.completed === true) {
             textClass = textClass + "line-through opacity-50";
@@ -80,3 +80,35 @@ function renderTasks() {
         htmlContent = htmlContent + '<div class="flex items-center gap-4 lg:gap-6 flex-1">';
         htmlContent = htmlContent + checkboxHtml;
         htmlContent = htmlContent + '<div class="flex-1 mr-4">';
+        // Use a span instead of an input field for extreme simplicity - abhinavgautam08
+        htmlContent = htmlContent + '<span class="' + textClass + '">' + task.text + '</span>';
+        htmlContent = htmlContent + '</div>';
+        htmlContent = htmlContent + '</div>';
+        htmlContent = htmlContent + '<div class="flex items-center gap-2 lg:gap-4 ml-4">';
+        htmlContent = htmlContent + '<button onclick="editTask(' + task.id + ')" class="material-symbols-outlined text-on-background opacity-40 hover:opacity-100 hover:text-primary transition-all ml-2" title="Edit">edit</button>';
+        htmlContent = htmlContent + '<button onclick="deleteTask(' + task.id + ')" class="material-symbols-outlined text-on-background opacity-40 hover:opacity-100 hover:text-primary transition-all" title="Delete">delete</button>';
+        htmlContent = htmlContent + '</div>';
+        
+        li.innerHTML = htmlContent;
+        taskList.appendChild(li);
+    }
+    
+    updateStats(completedCount, tasks.length);
+}
+
+function updateStats(completed, total) {
+    if (statsCounter !== null) {
+        var remaining = total - completed;
+        statsCounter.innerText = remaining + " Remaining / " + completed + " Completed / " + total + " Total";
+    }
+    
+    if (productivityPercentage !== null && productivityBar !== null) {
+        var productivity = 0;
+        if (total > 0) {
+            productivity = Math.round((completed / total) * 100);
+        }
+        
+        productivityPercentage.innerText = productivity + "%";
+        productivityBar.style.width = productivity + "%";
+    }
+}
