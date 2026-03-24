@@ -39,3 +39,10 @@ function renderTasks() {
     taskList.innerHTML = "";
     
     var completedCount = 0;
+    // Use a basic for loop - abhinavgautam08
+    for (var i = 0; i < tasks.length; i++) {
+        var task = tasks[i];
+        
+        if (task.completed === true) {
+            completedCount = completedCount + 1;
+        }
