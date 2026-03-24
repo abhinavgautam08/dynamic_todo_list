@@ -194,3 +194,14 @@ function editTask(id)
         renderTasks();
     }
 }
+// Event Listeners
+addTaskBtn.addEventListener('click', addTask);
+
+taskInput.addEventListener('keypress', function(e) {
+    if (e.key === 'Enter') {
+        addTask();
+    }
+});
+
+// Run this function when the page loads - abhinavgautam08
+renderTasks();
