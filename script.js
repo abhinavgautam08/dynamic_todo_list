@@ -35,3 +35,7 @@ function saveTasks() {
 }
 
 function renderTasks() {
+    // Clear the list first - abhinavgautam08
+    taskList.innerHTML = "";
+    
+    var completedCount = 0;
