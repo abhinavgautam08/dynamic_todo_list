@@ -112,3 +112,13 @@ function updateStats(completed, total) {
         productivityBar.style.width = productivity + "%";
     }
 }
+// Generate a simple ID - abhinavgautam08
+function generateId() {
+    return Math.floor(Math.random() * 1000000);
+}
+
+function addTask() {
+    var text = taskInput.value.trim();
+    
+    if (text === "") {
+        alert("Task cannot be empty!");
