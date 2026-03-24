@@ -3,7 +3,7 @@
 -----
 ## App Screenshots
 
-| Home Screen | Task Management | Focus Mode |
+| Home Screen | ScreenShot 2 | ScreenShot 3 |
 | :---: | :---: | :---: |
 | ![Screenshot 1](Screenshot1.png) | ![Screenshot 2](Screenshot2.png) | ![Screenshot 3](Screenshot3.png) |
 
