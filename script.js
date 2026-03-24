@@ -46,3 +46,13 @@ function renderTasks() {
         if (task.completed === true) {
             completedCount = completedCount + 1;
         }
+        // Filter logic: Skip this task if it doesn't match the current filter - abhinavgautam08
+        if (currentFilter === 'completed' && task.completed === false) {
+            continue;
+        }
+        if (currentFilter === 'pending' && task.completed === true) {
+            continue;
+        }
+
+        var li = document.createElement('li');
+        
