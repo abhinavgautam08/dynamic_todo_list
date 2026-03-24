@@ -53,6 +53,25 @@ function renderTasks() {
         if (currentFilter === 'pending' && task.completed === true) {
             continue;
         }
-
-        var li = document.createElement('li');
         
+        var li = document.createElement('li');
+        // Setup classes with if/else
+        var liClass = "task-row group flex items-center justify-between p-4 lg:p-6 border-b-4 border-on-background hover:bg-surface-container-high transition-colors ";
+        if (task.completed === true) {
+            liClass = liClass + "bg-white";
+        } else {
+            liClass = liClass + "bg-surface-variant";
+        }
+        li.className = liClass;
+        
+        var checkboxHtml = "";
+        if (task.completed === true) {
+            checkboxHtml = '<input type="checkbox" class="brutalist-checkbox shrink-0" checked onchange="toggleTask(' + task.id + ')"/>';
+        } else {
+            checkboxHtml = '<input type="checkbox" class="brutalist-checkbox shrink-0" onchange="toggleTask(' + task.id + ')"/>';
+        }
+        
+        var textClass = "task-title text-lg lg:text-xl font-black uppercase text-on-background w-full block ";
+        if (task.completed === true) {
+            textClass = textClass + "line-through opacity-50";
+        }
