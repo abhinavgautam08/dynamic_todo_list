@@ -54,3 +54,9 @@ body {
     outline: none;
     border-color: #b70100 !important;
 }
+.task-row {
+    margin-bottom: 0px; 
+}
+.task-row:last-child {
+    border-bottom: 0px; 
+}
