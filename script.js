@@ -53,7 +53,7 @@ function renderTasks() {
         if (currentFilter === 'pending' && task.completed === true) {
             continue;
         }
-        
+
         var li = document.createElement('li');
         // Setup classes with if/else
         var liClass = "task-row group flex items-center justify-between p-4 lg:p-6 border-b-4 border-on-background hover:bg-surface-container-high transition-colors ";
@@ -75,3 +75,8 @@ function renderTasks() {
         if (task.completed === true) {
             textClass = textClass + "line-through opacity-50";
         }
+        // Build HTML string by adding pieces together - abhinavgautam08
+        var htmlContent = "";
+        htmlContent = htmlContent + '<div class="flex items-center gap-4 lg:gap-6 flex-1">';
+        htmlContent = htmlContent + checkboxHtml;
+        htmlContent = htmlContent + '<div class="flex-1 mr-4">';
