@@ -179,3 +179,18 @@ function setFilter(filterType) {
 }
 
 function editTask(id) 
+{
+    // DOM manipulation!
+    var newText = prompt("Enter new text for your task:");
+    
+    if (newText !== null && newText.trim() !== "") {
+        for (var i = 0; i < tasks.length; i++) {
+            if (tasks[i].id === id) {
+                tasks[i].text = newText.trim();
+                break; // Stop loop once we find it
+            }
+        }
+        saveTasks();
+        renderTasks();
+    }
+}
