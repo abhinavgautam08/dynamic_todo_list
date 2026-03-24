@@ -22,3 +22,9 @@ tailwind.config = {
 // Initialize State - abhinavgautam08
 var tasks = [];
 var currentFilter = 'all';
+
+// Load from Local Storage - abhinavgautam08
+var savedTasks = localStorage.getItem("myTasks");
+if (savedTasks !== null) {
+    tasks = JSON.parse(savedTasks);
+}
