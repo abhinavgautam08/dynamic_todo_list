@@ -131,4 +131,13 @@ function addTask() {
         text: text,
         completed: false
     };
+    // Add to the beginning of the array - abhinavgautam08
+    tasks.unshift(newTask);
     
+    // Clear input after adding
+    taskInput.value = ""; 
+    
+    // Save state before rendering
+    saveTasks();
+    renderTasks();
+}
