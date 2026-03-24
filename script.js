@@ -28,3 +28,10 @@ var savedTasks = localStorage.getItem("myTasks");
 if (savedTasks !== null) {
     tasks = JSON.parse(savedTasks);
 }
+// Function to save tasks to Local Storage - abhinavgautam08
+function saveTasks() {
+    var tasksString = JSON.stringify(tasks);
+    localStorage.setItem("myTasks", tasksString);
+}
+
+function renderTasks() {
