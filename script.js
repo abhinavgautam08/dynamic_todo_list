@@ -141,3 +141,18 @@ function addTask() {
     saveTasks();
     renderTasks();
 }
+function deleteTask(id) {
+    var newTasks = [];
+    
+    // Use a basic loop instead of array filter - abhinavgautam08
+    for (var i = 0; i < tasks.length; i++) {
+        if (tasks[i].id !== id) {
+            newTasks.push(tasks[i]);
+        }
+    }
+    
+    tasks = newTasks;
+    
+    saveTasks();
+    renderTasks();
+}
